@@ -1,0 +1,10 @@
+{
+  "description": "Showcasing ExpoJuy 2026, this platform offers event details, ticket purchasing, and interactive schedules for attendees of Argentina's premier trade fair.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

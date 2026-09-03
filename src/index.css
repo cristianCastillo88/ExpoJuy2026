@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+/* Fuentes Oficiales ExpoJuy: Ambit */
+@font-face {
+  font-family: 'Ambit';
+  src: url('/fonts/Ambit-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ambit';
+  src: url('/fonts/Ambit-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ambit';
+  src: url('/fonts/Ambit-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ambit';
+  src: url('/fonts/Ambit-Bold.otf') format('opentype');
+  font-weight: 700 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* Paleta Oficial ExpoJuy 2026 */
+  --color-navy-950: #070F2B;
+  --color-navy-900: #0D2458;
+  --color-navy-800: #132E6E;
+  --color-navy-700: #1A3A8A;
+  --color-navy-600: #2451A3;
+
+  /* Azules de acento e identidad */
+  --color-blue-600: #0072CE;
+  --color-cyan-500: #00A3E0;
+
+  /* Verdes y Teals (Acción / Botones) */
+  --color-teal-700: #097A6C;
+  --color-teal-600: #0D9488;
+  --color-teal-500: #14B8A6;
+  --color-teal-400: #14D4B8;
+  --color-teal-100: #CCFAF3;
+
+  /* Neutros y Fondos */
+  --color-slate-900: #0F172A;
+  --color-slate-800: #1E293B;
+  --color-slate-600: #475569;
+  --color-slate-400: #94A3B8;
+  --color-slate-200: #E2E8F0;
+  --color-slate-100: #F1F5F9;
+  --color-slate-50: #F8FAFC;
+
+  /* Tipografías: Prioridad Oficial Ambit con fallbacks */
+  --font-display: 'Ambit', 'DM Serif Display', Georgia, serif;
+  --font-body: 'Ambit', 'Outfit', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    color: var(--color-slate-800);
+    background: #ffffff;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Countdown flip card style */
+.countdown-block {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 12px 20px;
+  min-width: 80px;
+  text-align: center;
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* FAQ accordion animation */
+.accordion-content {
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Nav link hover underline con color de acento oficial */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-cyan-500);
+  transition: width 0.25s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Card hover lift */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(13, 36, 88, 0.12);
+}
