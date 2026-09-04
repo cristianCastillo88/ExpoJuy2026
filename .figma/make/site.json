@@ -1,7 +1,15 @@
 {
-  "description": "Showcasing ExpoJuy 2026, this platform offers event details, ticket purchasing, and interactive schedules for attendees of Argentina's premier trade fair.",
+  "title": "ExpoJuy 2026 — Feria Multisectorial",
+  "description": "ExpoJuy 2026: La muestra multisectorial más grande del Norte Argentino. Innovación, talento, conferencias, espectáculos y venta de entradas.",
+  "language": "es",
+  "icons": {
+    "icon": "/favicon.png"
+  },
+  "openGraph": {
+    "image": "https://expojuy2026-nine.vercel.app/og-image.png"
+  },
   "robots": {
-    "index": false
+    "index": true
   },
   "accessibility": {
     "addBypassLinks": false,
